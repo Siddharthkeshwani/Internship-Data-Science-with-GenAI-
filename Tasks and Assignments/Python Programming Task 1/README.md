@@ -38,12 +38,10 @@ Interface: Jupyter Notebook, JupyterLab, Google Colab, or VS Code (with Jupyter 
 ##### Clone the repository:
 git clone <repository-url>
 
-
 ##### Navigate to this folder:
 cd "Tasks and Assignments/Python Programming Task 1"
-
 
 #### Launch Jupyter:
 jupyter notebook
 
-Open the desired .ipynb file from the browser interface to view and execute the cells.
+#### Open the desired .ipynb file from the browser interface to view and execute the cells.
