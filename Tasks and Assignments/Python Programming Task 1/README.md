@@ -10,7 +10,7 @@ This directory includes two Jupyter Notebooks:
 
 This notebook covers the essentials of Python syntax.
 
-Topics Covered:
+#### Topics Covered:
 
 Standard Output ("Hello, World!")
 
@@ -26,7 +26,7 @@ Function definition (Leap Year logic)
 
 Despite the title, this notebook focuses on algorithmic thinking and array manipulation (LeetCode-style problems).
 
-Key Problems Solved:
+#### Key Problems Solved:
 
 Running Sum of 1d Array: Calculating the cumulative sum of a list.
 
@@ -44,19 +44,15 @@ Interface: Jupyter Notebook, JupyterLab, Google Colab, or VS Code (with Jupyter 
 
 ### 🚀 How to Run
 
-Clone the repository:
-
+##### Clone the repository:
 git clone <repository-url>
 
 
-Navigate to this folder:
-
+##### Navigate to this folder:
 cd "Tasks and Assignments/Python Programming Task 1"
 
 
-Launch Jupyter:
-
+#### Launch Jupyter:
 jupyter notebook
-
 
 Open the desired .ipynb file from the browser interface to view and execute the cells.
