@@ -36,7 +36,7 @@ Interface: Jupyter Notebook, JupyterLab, Google Colab, or VS Code (with Jupyter 
 ### 🚀 How to Run
 
 ##### Clone the repository:
-git clone <repository-url>
+git clone '<repository-url>'
 
 ##### Navigate to this folder:
 cd "Tasks and Assignments/Python Programming Task 1"
