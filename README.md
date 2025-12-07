@@ -1,4 +1,4 @@
-Internship: Data Science with GenAI
+#Internship: Data Science with GenAI
 
 Welcome to the central repository for the Data Science with GenAI Internship. This repository serves as a portfolio of work, documenting the progression through various modules, coding challenges, and projects assigned during the program.
 
