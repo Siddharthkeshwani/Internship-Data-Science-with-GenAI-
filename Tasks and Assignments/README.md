@@ -7,7 +7,9 @@ This directory serves as the submission hub for all technical assignments comple
 Currently, this folder contains the following modules:
 
 Python Programming Task 1: A collection of notebooks focusing on Python syntax, control flow, and introductory algorithmic problem-solving.
+
 Python Programming Task 2: A notebook focusing on Python syntax, and  algorithmic problem-solving.
+
 Python Programming Task 3: A notebook focusing on Python syntax, and  algorithmic problem-solving.
 
 ### 🧭 How to Navigate
