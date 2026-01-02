@@ -1,127 +1,98 @@
-Here is a professional and structured `README.md` file based on the analysis and code developed in the previous steps. You can copy this directly into your GitHub repository.
+Here is a professional and structured `README.md` file tailored to the statistical analysis code provided in the previous step. You can copy this directly into your GitHub repository.
 
 ---
 
 ```markdown
-# Student Score Analysis & Statistical Testing 📊
+# Student Performance Statistical Analysis 📊
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Data Science](https://img.shields.io/badge/Domain-Data%20Science-orange)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 ## 📖 Overview
 
-This repository contains a comprehensive Python-based analysis of student performance across three distinct educational batches (`AI_ELITE_4`, `AI_ELITE_6`, `AI_ELITE_7`). 
+This repository contains a Python-based statistical analysis toolkit designed to evaluate student performance across different batches (`AI_ELITE_4`, `AI_ELITE_6`, `AI_ELITE_7`). 
 
-The project pipeline includes robust data cleaning, Exploratory Data Analysis (EDA), and rigorous statistical hypothesis testing to determine if observed performance differences are statistically significant. The analysis navigates challenges such as dirty data (whitespace issues) and non-normal distributions using non-parametric tests.
+The project performs an end-to-end analysis pipeline: from **data cleaning** (handling dirty CSV headers and string-based scores) to **exploratory data analysis (EDA)** and rigorous **hypothesis testing**. It automatically selects the appropriate statistical test (ANOVA vs. Kruskal-Wallis) based on assumption checks for normality and homogeneity of variance.
 
-## ✨ Key Features
+## 🚀 Key Features
 
-* **Robust Data Cleaning:** * Handles inconsistent column naming (whitespace removal).
-    * Parses complex string formats (e.g., transforming `"6 / 7"` to float `6.0`).
-* **Univariate Analysis:** * Distribution visualization using histograms and KDE.
-    * Calculation of skewness, kurtosis, and central tendency.
-* **Bivariate Analysis:** * Comparative visualization using Violin plots and Box plots to analyze spread across batches.
-* **Statistical Hypothesis Testing:**
-    * **Normality Check:** Shapiro-Wilk Test.
-    * **Homogeneity of Variance:** Levene’s Test.
-    * **Significance Testing:** Kruskal-Wallis H-test (automatically selected based on assumption checks).
-
-## 📂 Repository Structure
-
-```text
-├── data/
-│   └── scores_data.csv      # Raw input dataset (not included in repo, see requirements)
-├── output/
-│   ├── univariate_dist.png  # Generated histogram
-│   └── bivariate_plot.png   # Generated violin plot
-├── analysis.py              # Main Python script for analysis
-├── README.md                # Project documentation
-└── requirements.txt         # List of dependencies
-
-```
+* **Automated Data Cleaning:** Handles whitespace in CSV headers and converts fractional string scores (e.g., `"6 / 7"`) into usable numeric floats.
+* **Univariate Analysis:** Generates visualizations (Histograms/KDE) and calculates descriptive statistics (Skewness, Kurtosis).
+* **Bivariate Analysis:** Uses Violin plots to visualize the relationship between categorical batches and numerical scores.
+* **Dynamic Hypothesis Testing:**
+    * **Assumption Checks:** Shapiro-Wilk (Normality) and Levene’s Test (Homogeneity of Variance).
+    * **Test Selection:** Automatically defaults to **Kruskal-Wallis** if normality assumptions are violated, ensuring statistical validity.
 
 ## 🛠️ Installation
 
-1. **Clone the repository:**
-```bash
-git clone [https://github.com/your-username/student-score-analysis.git](https://github.com/your-username/student-score-analysis.git)
-cd student-score-analysis
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/yourusername/student-performance-analysis.git](https://github.com/yourusername/student-performance-analysis.git)
+    cd student-performance-analysis
+    ```
+
+2.  **Install dependencies**
+    Ensure you have Python installed. Install the required libraries using pip:
+    ```bash
+    pip install pandas matplotlib seaborn scipy
+    ```
+
+## 📂 Project Structure
+
+```text
+├── scores_data.csv             # Input dataset (Must contain 'Batch' and 'Score' columns)
+├── analysis_script.py          # Main Python script
+├── univariate_score_dist.png   # Output: Univariate distribution plot
+├── bivariate_score_batch.png   # Output: Bivariate violin plot
+└── README.md                   # Project documentation
 
 ```
 
+## 💻 Usage
 
-2. **Create a virtual environment (Optional but recommended):**
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
-```
+1. **Prepare the Data:** Place your `scores_data.csv` file in the root directory.
+2. **Run the Script:**
 
 
-3. **Install dependencies:**
-```bash
-pip install pandas matplotlib seaborn scipy
-
-```
+3. **Interpret Results:**
+* **Console Output:** View the p-values for Shapiro-Wilk, Levene's test, and the final Hypothesis test (Kruskal-Wallis/ANOVA).
+* **Visualizations:** Check the generated `.png` files to see the score distributions visually.
 
 
 
-## 🚀 Usage Guidelines
+## 📊 Methodology
 
-1. **Prepare your Data:**
-Ensure you have a CSV file named `scores_data.csv` in the root directory. The file must contain the following columns (whitespace is handled automatically):
-* `Batch`: The class or group ID.
-* `Score`: The score string (e.g., "5 / 7").
+The analysis follows a strict statistical framework:
 
-
-2. **Run the Analysis:**
-Execute the main script:
-```bash
-python analysis.py
-
-```
+1. **Data Preprocessing:**
+* Columns are stripped of whitespace.
+* Scores are parsed from string format to float.
 
 
-3. **View Results:**
-* **Console Output:** Statistical test results (p-values, F-stats, H-stats) and descriptive statistics will be printed to the terminal.
-* **Visualizations:** Check the directory for generated `.png` files visualizing the distributions.
+2. **Assumption Testing:**
+* *Normality:* Tested using **Shapiro-Wilk**.
+* *Variance:* Tested using **Levene’s Test**.
+
+
+3. **Hypothesis Testing:**
+* If data is Normal and Variances are Equal  **One-way ANOVA**.
+* If assumptions fail  **Kruskal-Wallis H-test** (Non-parametric).
 
 
 
-## 📊 Methodology & Insights
-
-The analysis follows a strict statistical workflow:
-
-1. **Data Loading:** Ingests CSV and strips artifact whitespace from headers.
-2. **Transformation:** Converts string-based fractional scores into floats.
-3. **Assumption Checking:**
-* *Shapiro-Wilk* indicated data was **not normal**.
-* *Levene's Test* indicated **equal variances**.
+*Current results indicate non-normal distributions, leading to the use of Kruskal-Wallis.*
 
 
-4. **Test Selection:** Due to non-normality, **Kruskal-Wallis** was selected over ANOVA.
-5. **Conclusion:** The analysis rejected the Null Hypothesis (), confirming statistically significant performance differences between the batches (Batch 7 > Batch 6 > Batch 4).
 
-## 🤝 Contribution Guidelines
-
-Contributions are welcome! If you have suggestions for improving the visualization or adding post-hoc tests (like Dunn's test), please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
-
-## 📄 License
+## 📝 License
 
 This project is open-source and available for educational and analytical purposes.
 
-## 📞 Contact
+## 📧 Contact
 
-**Siddharth Keshwani** * **siddharthkeshwani10@gmail.com:**
+**siddharth keshwani** * **GitHub:** [github.com/yourusername](https://github.com/Siddharthkeshwani)
 
 * **LinkedIn:** [linkedin.com/in/yourprofile](https://www.linkedin.com/in/siddharthkeshwani/)
-* **GitHub:** [github.com/yourusername](https://github.com/Siddharthkeshwani)
-
+* **Email:** siddharthkeshwani10@gmail.com
 
