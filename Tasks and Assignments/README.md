@@ -12,6 +12,8 @@ Python Programming Task 2: A notebook focusing on Python syntax, and  algorithmi
 
 Python Programming Task 3: A notebook focusing on Python syntax, and  algorithmic problem-solving.
 
+EDA(Exploratory Data Analysis): Contains Multiple Project analysis in detail 
+
 ### 🧭 How to Navigate
 
 Each sub-folder within this directory represents a distinct task or learning module. Inside each sub-folder, you will find:
