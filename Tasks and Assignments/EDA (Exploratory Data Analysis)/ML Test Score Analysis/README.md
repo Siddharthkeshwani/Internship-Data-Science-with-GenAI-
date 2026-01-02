@@ -5,10 +5,6 @@ Here is a professional and structured `README.md` file tailored to the statistic
 ```markdown
 # Student Performance Statistical Analysis 📊
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![Data Science](https://img.shields.io/badge/Domain-Data%20Science-orange)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-
 ## 📖 Overview
 
 This repository contains a Python-based statistical analysis toolkit designed to evaluate student performance across different batches (`AI_ELITE_4`, `AI_ELITE_6`, `AI_ELITE_7`). 
