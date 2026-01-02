@@ -119,7 +119,7 @@ This project is open-source and available for educational and analytical purpose
 
 ## 📞 Contact
 
-**Your Name** * **Email:** your.email@example.com
+**Siddharth Keshwani** * **siddharthkeshwani10@gmail.com:** your.email@example.com
 
 * **LinkedIn:** [linkedin.com/in/yourprofile](https://www.linkedin.com/in/siddharthkeshwani/)
 * **GitHub:** [github.com/yourusername](https://github.com/Siddharthkeshwani)
